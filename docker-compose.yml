@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  web:
+    build: ./
+    command: python manage.py runserver 0.0.0.0:8888
+    volumes:
+      - ./:/usr/src/app/
+    ports:
+      - 8888:8888
+    depends_on:
+      - db
+  db:
+    image: postgres:12.0
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=iananevich
+      - POSTGRES_PASSWORD=qwerty
+      - POSTGRES_DB=company
+
+volumes:
+  postgres_data:
