@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from company.models import Employees, Device, Delivery
 from api.serializers import DeviceSerializer, DeliverySerializer, EmployeesSerializer
 from rest_framework import viewsets

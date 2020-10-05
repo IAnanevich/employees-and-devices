@@ -7,7 +7,7 @@ from company.models import Employees, Device, Delivery
 class EmployeesSerializer(ModelSerializer):
     class Meta:
         model = Employees
-        fields = ("id", "first_name", "last_name", "email", "register_date", "photo")
+        fields = ("id", "first_name", "last_name", "email", "register_date", "photo", 'url')
 
 
 class DeviceSerializer(ModelSerializer):
